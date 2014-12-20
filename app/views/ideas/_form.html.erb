@@ -21,7 +21,8 @@
   </div>
   <div class="field">
     <%= f.label :picture %><br>
-    <%= f.text_field :picture %>
+    <%= f.file_field :picture %>
+    <%= image_tag(@idea.picture, :width => 600) if @idea.picture.present? %>
   </div>
   <div class="actions">
     <%= f.submit %>
